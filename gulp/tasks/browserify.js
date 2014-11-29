@@ -14,6 +14,7 @@ var bundleLogger = require('../util/bundleLogger');
 var gulp         = require('gulp');
 var handleErrors = require('../util/handleErrors');
 var source       = require('vinyl-source-stream');
+var $ = require('gulp-load-plugins')();
 var config       = require('../config').browserify;
 
 gulp.task('browserify', function(callback) {
@@ -46,7 +47,12 @@ gulp.task('browserify', function(callback) {
         // desired output filename here.
         .pipe(source(bundleConfig.outputName))
         // Specify the output destination
+
+        //.pipe($.streamify($.uglify())) // Concatenate And Minify Scripts
+
         .pipe(gulp.dest(bundleConfig.dest))
+
+
         .on('end', reportFinished);
     };
 

@@ -13,10 +13,11 @@ module.exports = {
     ]
   },
   styles: {
-    src: src + "/app/assets/stylesheets/main.{sass,scss}",
+    src: src + "/app/assets/stylesheets/**/*.{sass,scss}",
     dest: dest + "/app/assets/stylesheets/",
     settings: {
       sourceComments: "map",
+      errLogToConsole: true,
       imagePath: "/app/assets/images",
       includePaths: [
         src + "/vendor/assets/bower_components/",
