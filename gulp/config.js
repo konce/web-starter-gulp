@@ -49,5 +49,17 @@ module.exports = {
   fonts: {
     src: src + "/app/assets/fonts/**/*{eot,ttf,woff,svg}",
     dest: dest + "/app/assets/fonts"
+  },
+  copy: {
+    files: [
+      {
+        src: src + "/vendor/assets/bower_components/html5shiv/dist/html5shiv.min.js",
+        dest: dest + "/vendor/assets/bower_components/html5shiv/dist/"
+      },
+      {
+        src: src + "/vendor/assets/bower_components/respond/dest/respond.min.js",
+        dest: dest + "/vendor/assets/bower_components/respond/dest/"
+      }
+    ]
   }
 };
