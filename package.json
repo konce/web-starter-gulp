@@ -53,7 +53,8 @@
     "transform": [
       "browserify-shim",
       "coffeeify",
-      "hbsfy"
+      "hbsfy",
+      "ejsify"
     ]
   },
   "devDependencies": {
@@ -65,6 +66,7 @@
     "gulp-autoprefixer": "^2.0.0",
     "gulp-changed": "^0.4.1",
     "gulp-csso": "^0.2.9",
+    "gulp-gzip": "0.0.8",
     "gulp-if": "^1.2.5",
     "gulp-imagemin": "^0.6.2",
     "gulp-load-plugins": "^0.7.1",

@@ -37,7 +37,7 @@ module.exports = {
     // Enable source maps
     debug: true,
     // Additional file extentions to make optional
-    extensions: [".coffee", ".hbs"],
+    extensions: [".coffee", ".hbs", ".ejs"],
     // A separate bundle will be generated for each
     // bundle config in the list below
     bundleConfigs: [{
@@ -45,5 +45,9 @@ module.exports = {
       dest: dest + "/app/assets/javascripts/",
       outputName: "main.js"
     }]
+  },
+  fonts: {
+    src: src + "/app/assets/fonts/**/*{eot,ttf,woff,svg}",
+    dest: dest + "/app/assets/fonts"
   }
 };

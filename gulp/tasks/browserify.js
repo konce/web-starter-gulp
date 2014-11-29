@@ -49,7 +49,7 @@ gulp.task('browserify', function(callback) {
         // Specify the output destination
 
         //.pipe($.streamify($.uglify())) // Concatenate And Minify Scripts
-
+        //.pipe($.gzip())
         .pipe(gulp.dest(bundleConfig.dest))
 
 
