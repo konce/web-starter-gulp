@@ -1,0 +1,23 @@
+{
+  "name": "web-starter-gulp",
+  "version": "0.1.0",
+  "authors": [
+    "Iuriy-Budnikov <iuriy.budnikov@abcsolute.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ABC-Solutions/web-starter-gulp",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "development/vendor/assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "gsap": "~1.14.2",
+    "marionette": "~2.2.2",
+    "react": "~0.12.1"
+  }
+}
