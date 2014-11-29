@@ -61,5 +61,8 @@ module.exports = {
         dest: dest + "/vendor/assets/bower_components/respond/dest/"
       }
     ]
+  },
+  clean: {
+    files: [dest]
   }
 };
