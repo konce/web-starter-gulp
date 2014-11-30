@@ -1,4 +1,4 @@
 #!/bin/sh
 npm install
 bower install
-gulp production
+bash run_gulp_build.sh
