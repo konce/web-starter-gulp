@@ -1,6 +1,6 @@
 /* browserify task
    ---------------
-   Bundle javascripty things with browserify!
+   Bundle javascript things with browserify!
 
    This task is set up to generate multiple separate bundles, from
    different sources, and to use Watchify when run from the default task.
@@ -84,3 +84,47 @@ gulp.task('browserify', function(callback) {
   // Start bundling with Browserify for each bundleConfig specified
   config.bundleConfigs.forEach(browserifyThis);
 });
+
+gulp.task('browserify:production', function(callback) {
+  var bundleQueue = config.bundleConfigs.length;
+  var browserifyThis = function(bundleConfig) {
+    var bundler = browserify({
+      cache: {}, packageCache: {}, fullPaths: true,
+      entries: bundleConfig.entries,
+      extensions: config.extensions,
+      debug: config.debug
+    });
+    var bundle = function() {
+      bundleLogger.start(bundleConfig.outputName);
+      return bundler
+        .bundle()
+        .on('error', handleErrors)
+        .pipe(source(bundleConfig.outputName))
+        .pipe($.streamify($.uglify())) // Concatenate And Minify Scripts
+        .pipe(gulp.dest(bundleConfig.dest))
+        .on('end', function() {
+          gulp.src(bundleConfig.dest + bundleConfig.outputName)
+            .pipe($.gzip())
+            .pipe(gulp.dest(bundleConfig.dest));
+        })
+        .on('end', reportFinished);
+    };
+    if(global.isWatching) {
+      bundler = watchify(bundler);
+      bundler.on('update', bundle);
+    }
+    var reportFinished = function() {
+      bundleLogger.end(bundleConfig.outputName)
+      if(bundleQueue) {
+        bundleQueue--;
+        if(bundleQueue === 0) {
+          callback();
+        }
+      }
+    };
+    return bundle();
+  };
+  config.bundleConfigs.forEach(browserifyThis);
+});
+
+

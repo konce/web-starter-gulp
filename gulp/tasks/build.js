@@ -1,3 +1,5 @@
 var gulp = require("gulp");
 
-gulp.task("build", [ "browserify", "styles", "images", "fonts", "html", "copy"]);
+gulp.task("development", [ "browserify", "styles", "images", "fonts", "html", "copy"]);
+
+gulp.task("production", [ "browserify:production", "styles:production", "images", "fonts", "html", "copy"]);
