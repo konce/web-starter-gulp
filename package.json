@@ -14,7 +14,18 @@
     "backbone.babysitter": "./development/vendor/assets/bower_components/backbone.babysitter/lib/backbone.babysitter.js",
     "marionette": "./development/vendor/assets/bower_components/marionette/lib/backbone.marionette.js",
     "react": "./development/vendor/assets/bower_components/react/react-with-addons.js",
-    "JSXTransformer": "./development/vendor/assets/bower_components/react/build/JSXTransformer.js"
+    "JSXTransformer": "./development/vendor/assets/bower_components/react/build/JSXTransformer.js",
+    "TweenLite": "./development/vendor/assets/bower_components/gsap/src/uncompressed/TweenLite.js",
+    "TimelineLite": "./development/vendor/assets/bower_components/gsap/src/uncompressed/TimelineLite.js",
+    "TweenMax": "./development/vendor/assets/bower_components/gsap/src/uncompressed/TweenMax.js",
+    "TimelineMax": "./development/vendor/assets/bower_components/gsap/src/uncompressed/TimelineMax.js",
+    "modernizr": "./development/vendor/assets/bower_components/modernizr/modernizr.js",
+    "platform": "./development/vendor/assets/bower_components/platform/platform.js",
+    "device": "./development/vendor/assets/bower_components/devicejs/lib/device.js",
+    "hammer": "./development/vendor/assets/bower_components/hammer.js/hammer.js",
+    "skrollr": "./development/vendor/assets/bower_components/skrollr/src/skrollr.js",
+    "owl.carousel": "./development/vendor/assets/bower_components/owl.carousel/dist/owl.carousel.js",
+    "bootstrap": "./development/vendor/assets/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"
   },
   "browserify-shim": {
     "jquery": "$",
@@ -47,6 +58,50 @@
     },
     "JSXTransformer": {
       "exports": "JSXTransformer"
+    },
+    "TweenLite": {
+      "exports": "TweenLite"
+    },
+    "TimelineLite": {
+      "exports": "TimelineLite",
+      "depends": [
+        "TweenLite"
+      ]
+    },
+    "TweenMax": {
+      "exports": "TweenMax"
+    },
+    "TimelineMax": {
+      "exports": "TimelineMax",
+      "depends": [
+        "TweenMax"
+      ]
+    },
+    "modernizr": {
+      "exports": "Modernizr"
+    },
+    "platform": {
+      "exports": "platform"
+    },
+    "device": {
+      "exports": "device"
+    },
+    "hammer": {
+      "exports": "Hammer"
+    },
+    "skrollr": {
+      "exports": "skrollr"
+    },
+    "owl.carousel": {
+      "exports": "$.fn.owlCarousel",
+      "depends": [
+        "jquery"
+      ]
+    },
+    "bootstrap": {
+      "depends": [
+        "jquery"
+      ]
     }
   },
   "browserify": {

@@ -14,7 +14,7 @@ var bundleLogger = require('../util/bundleLogger');
 var gulp         = require('gulp');
 var handleErrors = require('../util/handleErrors');
 var source       = require('vinyl-source-stream');
-var $ = require('gulp-load-plugins')();
+var $            = require('gulp-load-plugins')();
 var config       = require('../config').browserify;
 
 gulp.task('browserify', function(callback) {
@@ -61,12 +61,13 @@ gulp.task('browserify', function(callback) {
       bundler = watchify(bundler);
       // Rebundle on update
       bundler.on('update', bundle);
+
+
     }
 
     var reportFinished = function() {
       // Log when bundling completes
       bundleLogger.end(bundleConfig.outputName)
-
       if(bundleQueue) {
         bundleQueue--;
         if(bundleQueue === 0) {
