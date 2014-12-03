@@ -1,7 +1,7 @@
-_ =  require "underscore"
-$ =  require "jquery"
-Marionette = require "marionette"
-React = require "react"
+#_ =  require "underscore"
+#$ =  require "jquery"
+#Marionette = require "marionette"
+#React = require "react"
 #TweenLite = require "TweenLite"
 #TimelineLite = require "TimelineLite"
 #TweenMax = require "TweenMax"
@@ -14,10 +14,15 @@ React = require "react"
 #require "owl.carousel"
 #require "bootstrap"
 
-RadComponent = require "./react-component"
+#RadComponent = require "./react-component"
 
-React.renderComponent(
-  RadComponent
-    rad: "Hello world! I am React with coffee :)"
-  document.getElementById('container')
-)
+#React.renderComponent(
+#  RadComponent
+#    rad: "Hello world! I am React with coffee :)"
+#  document.getElementById('container')
+#)
+
+Base = require "./components/base"
+base = new Base()
+
+#require "./marionette/app" # start marionette app
