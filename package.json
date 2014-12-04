@@ -14,6 +14,7 @@
     "backbone.babysitter": "./development/vendor/assets/bower_components/backbone.babysitter/lib/backbone.babysitter.js",
     "marionette": "./development/vendor/assets/bower_components/marionette/lib/backbone.marionette.js",
     "marionette.app": "./development/app/assets/javascripts/marionette/app.coffee",
+    "javascript.app": "./development/app/assets/javascripts/javascript/app.coffee",
     "react": "./development/vendor/assets/bower_components/react/react-with-addons.js",
     "JSXTransformer": "./development/vendor/assets/bower_components/react/build/JSXTransformer.js",
     "TweenLite": "./development/vendor/assets/bower_components/gsap/src/uncompressed/TweenLite.js",

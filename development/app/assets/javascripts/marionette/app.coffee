@@ -1,3 +1,5 @@
+"use strict"
+
 Marionette = require "marionette"
 
 App = do (Backbone, Marionette) ->
