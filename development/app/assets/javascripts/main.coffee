@@ -1,7 +1,4 @@
-#_ =  require "underscore"
-#$ =  require "jquery"
-#Marionette = require "marionette"
-#React = require "react"
+
 #TweenLite = require "TweenLite"
 #TimelineLite = require "TimelineLite"
 #TweenMax = require "TweenMax"
@@ -10,9 +7,7 @@
 #Modernizr = require "modernizr"
 #Platform = require "platform"
 #Device = require "device"
-#Hammer = require "hammer"
-#require "owl.carousel"
-#require "bootstrap"
+
 
 #RadComponent = require "./react-component"
 
@@ -25,4 +20,6 @@
 Base = require "./components/base"
 base = new Base()
 
-#require "./marionette/app" # start marionette app
+MarionetteApp = require "./marionette/app"
+MarionetteApp.start()
+console.log "Marionette App: ", MarionetteApp

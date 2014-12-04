@@ -1,10 +1,10 @@
 {
   "name": "gulp-starter",
   "version": "0.1.1",
-  "description": "Gulp starter with common tasks and scenarios",
+  "description": "Gulp starter with Flux App, Marionette App",
   "repository": {
     "type": "git",
-    "url": "git://github.com/greypants/gulp-starter.git"
+    "url": "https://github.com/ABC-Solutions/web-starter-grunt"
   },
   "browser": {
     "jquery": "./development/vendor/assets/bower_components/jquery/dist/jquery.js",
@@ -13,6 +13,7 @@
     "backbone.wreqr": "./development/vendor/assets/bower_components/backbone.wreqr/lib/backbone.wreqr.js",
     "backbone.babysitter": "./development/vendor/assets/bower_components/backbone.babysitter/lib/backbone.babysitter.js",
     "marionette": "./development/vendor/assets/bower_components/marionette/lib/backbone.marionette.js",
+    "marionette.app": "./development/app/assets/javascripts/marionette/app.coffee",
     "react": "./development/vendor/assets/bower_components/react/react-with-addons.js",
     "JSXTransformer": "./development/vendor/assets/bower_components/react/build/JSXTransformer.js",
     "TweenLite": "./development/vendor/assets/bower_components/gsap/src/uncompressed/TweenLite.js",

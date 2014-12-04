@@ -1,4 +1,6 @@
-@App = do (Backbone, Marionette) ->
+Marionette = require "marionette"
+
+App = do (Backbone, Marionette) ->
 
   App = new Marionette.Application()
 
@@ -15,10 +17,14 @@
     mainRegion: '#layout-region'
 
   App.on "before:start", (options) ->
-    require ["path/components/initialize/initialize_app"], =>
-      App.module("InitializeApp").start(options)
 
   App.addInitializer =>
+    require "./config/routes"
+    require "./components/base/base_controller"
+    require "./components/base/base_entities"
+    require "./components/base/base_router"
+    require "./components/base/base_views"
+    require "./entities/entities"
 
   App.on 'start', ->
     if Backbone.history
@@ -26,3 +32,6 @@
         pushState: true
       if @getCurrentRoute() is ''
         @navigate(@rootRoute, trigger: true)
+
+
+module.exports = App
