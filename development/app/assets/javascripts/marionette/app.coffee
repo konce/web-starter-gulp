@@ -19,6 +19,7 @@ App = do (Backbone, Marionette) ->
     mainRegion: '#layout-region'
 
   App.on "before:start", (options) ->
+    @device = options.device
 
   App.addInitializer =>
     require "./config/routes"

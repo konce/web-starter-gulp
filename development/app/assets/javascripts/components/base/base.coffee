@@ -1,5 +1,6 @@
 "use strict"
 
+$ = require "jquery"
 
 # Base class for project.
 class Base
