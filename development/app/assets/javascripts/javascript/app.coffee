@@ -1,6 +1,8 @@
 "use strict"
 
-Project = require "project"
+Device = require "./components/device/device"
+
+device = new Device()
 
 App = do () ->
 
