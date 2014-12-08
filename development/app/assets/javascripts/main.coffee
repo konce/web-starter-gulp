@@ -4,7 +4,8 @@ Device = require "./components/device/device"
 device = new Device()
 
 JavascriptApp = require "./javascript/app"
-#JavascriptApp.start()
+JavascriptApp.start
+  device: device.options
 
 #FluxApp = require "./flux/app"
 
