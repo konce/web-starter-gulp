@@ -28,6 +28,7 @@
     "devicejs": "~0.1.16",
     "hammer.js": "~2.0.4",
     "skrollr": "~0.6.29",
-    "owl.carousel": "*"
+    "owl.carousel": "*",
+    "fluxxor": "~1.5.0"
   }
 }
