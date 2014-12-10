@@ -35,7 +35,7 @@ class Base
 
 
   trigger: (event, args...) ->
-    return this unless @_events[event]?
+    unless @_events[event]? then return this
     handler.apply this, args for handler in @_events[event]
     @
 

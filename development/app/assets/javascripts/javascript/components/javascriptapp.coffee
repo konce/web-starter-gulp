@@ -9,9 +9,10 @@ class JavascriptApp extends Base
   start: (options) ->
     menu = new Menu
       device: options.device
-      menu: ".menu"
-      btn: ".js-menu-toggle"
-      active: ".is-active"
+      menuElement: ".js-menu"
+      btnElement: ".js-menu-btn"
+      activeClass: ".is-active"
+      transition: 1000
     menu.start()
 
 module.exports = JavascriptApp
