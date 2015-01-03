@@ -3,7 +3,7 @@
 device = require "device"
 platform = require "platform"
 modernizr = require "modernizr"
-Base = require "./../base/base"
+Base = require "./base"
 
 #console.log(modernizr)
 

@@ -1,6 +1,6 @@
 "use strict"
 
-Base = require "./../../components/base/base"
+Base = require "./base"
 
 Menu = require "./menu"
 
