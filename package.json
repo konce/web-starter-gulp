@@ -27,7 +27,8 @@
     "hammer": "./development/vendor/assets/bower_components/hammer.js/hammer.js",
     "skrollr": "./development/vendor/assets/bower_components/skrollr/src/skrollr.js",
     "owl.carousel": "./development/vendor/assets/bower_components/owl.carousel/dist/owl.carousel.js",
-    "bootstrap": "./development/vendor/assets/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"
+    "bootstrap": "./development/vendor/assets/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js",
+    "fluxxor": "./development/vendor/assets/bower_components/fluxxor/build/fluxxor.js"
   },
   "browserify-shim": {
     "jquery": "$",
@@ -104,6 +105,9 @@
       "depends": [
         "jquery"
       ]
+    },
+    "fluxxor": {
+      "exports": "Fluxxor"
     }
   },
   "browserify": {

@@ -1,8 +1,7 @@
-React = require('react')
-TodoApp = require('./components/TodoApp')
+React = require "react"
+Fluxxor = require "fluxxor"
 
+actions = require "./actions"
+stores = require "./stores"
 
-React.render(
-  <TodoApp />,
-  document.getElementById('container')
-)
+flux = new Fluxxor.Flux(stores, actions)
