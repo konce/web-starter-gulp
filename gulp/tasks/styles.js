@@ -12,7 +12,7 @@ gulp.task('styles', ['images'], function () {
     .on('error', handleErrors)
     .pipe($.sourcemaps.init())
     .pipe($.sourcemaps.write())
-    .pipe($.autoprefixer({ browsers: AUTOPREFIXER }))
+    .pipe($.autoprefixer({ brçowsers: AUTOPREFIXER }))
     .pipe(gulp.dest(config.dest))
     .pipe($.size({title: 'styles'}))
     .pipe(browserSync.reload({stream:true}));
