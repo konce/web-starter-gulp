@@ -3,18 +3,23 @@
 ```
 images
    |
-   |--favicons
+   |--favicons (folder for favicons)
    |  └-- favicon.ico
-   |  └-- favicon-size.png
+   |  └-- favicon-name + size {.png}
    |  └-- example: favicon-144x144.png
    |  └-- ...
    |
    └--icons
    |  └--svg
-   |  |  └-- icon-name-size-color.svg
-   |  |  └-- example: icon-logo-default-white.svg
-   |  png
+   |  |  └-- icon-name + color + size {.svg}
+   |  |  └-- example: arrow-white-small.svg
+   |  |
+   |  └--png
+   |      └-- ...
    |    
-   └--icons    
+   └--ui
+   |  └-- image-name-
+   
+   
 ```
 
