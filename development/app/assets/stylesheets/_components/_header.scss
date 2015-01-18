@@ -2,8 +2,36 @@
 // Header
 // ==========================================================================
 
-$module: 'header';
+.header {
+  background: $color--base;
+  @include outer-container(100%);
+  @include position(relative);
+  @include size(100%, 10rem);
+  @include browser(ie) {
+    @include size(100%, 8rem);
+  }
 
-.#{$module} {
-  position: relative;
+    &__container {
+      @include position(relative);
+    }
+
+      &__collection {
+        @include position(relative);
+        @include span-columns(6);
+      }
+
+        &__item {
+          @include position(relative);
+          @include span-columns(3);
+        }
+
+          &__link {
+            color: $color--delta;
+            font-size: 3rem;
+            @include transition(color 300ms ease-in-out);
+            &:hover {
+              color: $color--beta;
+              text-decoration: none;
+            }
+          }
 }

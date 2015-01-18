@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--><html class="no-js" lang="en-GB"> <!--<![endif]-->
   <head>
     <meta charset="utf-8" />
-    <title>Marionette + Requirejs + CoffeeScript + Grunt + SASS Base Web App</title>
+    <title>Hello! I am base application</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -23,50 +23,38 @@
     <![endif]-->
   </head>
   <body>
+
     <header class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Project name</a>
-          </div>
-          <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right"><li>
-              <a href="">Users</a>
-            </li><li>
-              <a href="">Leads</a>
-            </li><li>
-              <a href="">Appointments</a>
-            </li></ul>
-          </div>
-        </div>
-        <!-- /.container -->
-      </div>
-    </header>
-    <!-- /header -->
+      <nav class="header__container">
+        <ul class="header__collection">
+
+          <li class="header__item">
+            <a href="javascript:void(0)" class="header__link">Menu</a>
+          </li><!-- /.header__item -->
+
+          <li class="header__item">
+            <a href="javascript:void(0)" class="header__link">About</a>
+          </li><!-- /.header__item -->
+
+          <li class="header__item">
+            <a href="javascript:void(0)" class="header__link">Contact Us</a>
+          </li><!-- /.header__item -->
+
+        </ul>
+      </nav><!-- /.header__container -->
+    </header><!-- /.header -->
+
     <section class="section">
       <div class="container">
-        <div class="page-header">
-          <div id="container"></div>
-        </div>
-      </div>
-      <!-- /.container -->
-    </section>
-    <!-- /section -->
+      </div><!-- /.container -->
+    </section><!-- /section -->
+
     <footer class="footer">
-      <div class="container">
-        <p class="text-muted">
-          Place sticky footer content here.
-        </p>
-      </div>
-      <!-- /.container -->
-    </footer>
-    <!-- /footer -->
+      <div class="footer__container">
+      </div><!-- /.footer__container -->
+    </footer><!-- /.footer -->
+
     <script src="app/assets/javascripts/main.js"></script>
+
   </body>
 </html>

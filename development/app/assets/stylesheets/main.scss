@@ -14,8 +14,10 @@
 // Mixins
 
 @import "_mixins/bourbon";
-@import "_mixins/media";
+@import "_mixins/neat";
+@import "_mixins/breakpoints";
 @import "_mixins/bootstrap";
+@import "_mixins/browser";
 
 // Components
 

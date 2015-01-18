@@ -1,9 +1,5 @@
 // ==========================================================================
-// Footer
+// Mixins from neat
 // ==========================================================================
 
-.footer {
-  background: $color--base;
-  @include position(absolute, 0 0 0rem 0);
-  @include size(100%, 10rem);
-}
+@import "neat/app/assets/stylesheets/_neat";
