@@ -3,7 +3,7 @@
 // ==========================================================================
 
 .footer {
-  background: $color--base;
-  @include position(absolute, 0 0 0rem 0);
-  @include size(100%, 10rem);
+  background: $base-background-color;
+  @include position(absolute, null 0 0 0);
+  @include size(100% rem(100));
 }

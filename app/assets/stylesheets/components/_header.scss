@@ -3,12 +3,12 @@
 // ==========================================================================
 
 .header {
-  background: $color--base;
+  background: $base-background-color;
   @include outer-container(100%);
-  @include position(relative);
-  @include size(100%, 10rem);
-  @include browser(ie) {
-    @include size(100%, 8rem);
+  @include position(relative, null);
+  @include size(100% rem(100));
+  @include root(ie) {
+    @include size(100% rem(100));
   }
 
     &__container {
@@ -26,12 +26,11 @@
         }
 
           &__link {
-            color: $color--delta;
-            font-size: 3rem;
+            color: $base-link-color;
+            font-size: rem(14);
             @include transition(color 300ms ease-in-out);
             &:hover {
-              color: $color--beta;
-              text-decoration: none;
+              color: $base-link-color;
             }
           }
 }

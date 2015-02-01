@@ -1,5 +1,7 @@
 // ==========================================================================
-// Mixins from neat
+// Layouts
 // ==========================================================================
 
-@import "neat/app/assets/stylesheets/_neat";
+@import "normalize";
+@import "base";
+@import "home";

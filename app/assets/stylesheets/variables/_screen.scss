@@ -1,0 +1,61 @@
+// ==========================================================================
+// Variables: Media Queries
+// ==========================================================================
+
+
+//// Extra small screen / phone
+$screen-xs:                  rem(480) !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+$screen-sm:                  rem(768) !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / laptop
+$screen-md:                  rem(1025) !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / desktop
+$screen-lg:                  rem(1200) !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+$screen-xs-max:              ($screen-sm-min - rem(1)) !default;
+$screen-sm-max:              ($screen-md-min - rem(1)) !default;
+$screen-md-max:              ($screen-lg-min - rem(1)) !default;
+
+// ==========================================================================
+// Base Breakpoints
+
+// Phone
+$screen-phone:               new-breakpoint(max-width $screen-xs);
+$screen-phone-portrait:      new-breakpoint(max-width $screen-xs orientation portrait);
+$screen-phone-landscape:     new-breakpoint(max-width $screen-xs orientation landscape);
+
+$screen-phone-max:           new-breakpoint(max-width $screen-xs-max);
+$screen-phone-max-portrait:  new-breakpoint(max-width $screen-xs-max orientation portrait);
+$screen-phone-max-landscape: new-breakpoint(max-width $screen-xs-max orientation landscape);
+
+// Tablet
+$screen-tablet-min:          new-breakpoint(min-width $screen-sm-min);
+$screen-tablet:              new-breakpoint(min-width $screen-sm-min max-width $screen-sm-max);
+$screen-tablet-portrait:     new-breakpoint(min-width $screen-sm-min max-width $screen-sm-max orientation portrait);
+$screen-tablet-landscape:    new-breakpoint(min-width $screen-sm-min max-width $screen-sm-max orientation landscape);
+$screen-tablet-max:          new-breakpoint(max-width $screen-sm-max);
+
+// Tablet - Laptop
+$screen-tablet-laptop:       new-breakpoint(min-width $screen-sm-min max-width $screen-md-max);
+$screen-tablet-desktop:      new-breakpoint(min-width $screen-sm-min max-width $screen-lg);
+
+// Laptop
+$screen-laptop-min:          new-breakpoint(min-width $screen-md-min);
+$screen-laptop:              new-breakpoint(min-width $screen-md-min max-width $screen-md-max);
+$screen-laptop-portrait:     new-breakpoint(min-width $screen-md-min max-width $screen-md-max orientation portrait);
+$screen-laptop-landscape:    new-breakpoint(min-width $screen-md-min max-width $screen-md-max orientation landscape);
+$screen-laptop-max:          new-breakpoint(max-width $screen-md-max);
+
+// Desktop
+$screen-desktop:             new-breakpoint(min-width $screen-lg-min);

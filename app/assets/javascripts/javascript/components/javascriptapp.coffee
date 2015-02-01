@@ -9,8 +9,8 @@ class JavascriptApp
 
   start: (options) ->
 
-    rem = new Rem()
-    rem.start()
+#    rem = new Rem()
+#    rem.start()
 
     menu = new Menu
       device: options.device

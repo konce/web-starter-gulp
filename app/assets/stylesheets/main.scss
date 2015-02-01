@@ -4,25 +4,18 @@
 // Main
 // ==========================================================================
 
-// Variables
-
-@import "_variables/path";
-@import "_variables/colors";
-@import "_variables/fonts";
-@import "_variables/bootstrap";
-
 // Mixins
 
-@import "_mixins/bourbon";
-@import "_mixins/neat";
-@import "_mixins/breakpoints";
-@import "_mixins/bootstrap";
-@import "_mixins/browser";
+@import "mixins/mixins";
+
+// Variables
+
+@import "variables/variables";
+
+// Layouts
+
+@import "layouts/layouts";
 
 // Components
 
-@import "components";
-
-// Base
-
-@import "base";
+@import "components/components";

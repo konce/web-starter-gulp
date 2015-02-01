@@ -1,0 +1,40 @@
+// ==========================================================================
+// Variables: Base
+// ==========================================================================
+
+// Typography
+
+$base-font-family: $helvetica !default;
+$base-title-font-family: $georgia !default;
+
+// Size
+
+$base-font-size: 18px;
+$base-font-small: rem($base-font-size * .075) !default;
+$base-font-base: rem($base-font-size * 1) !default;
+$base-font-medium: rem($base-font-size * 1.25) !default;
+$base-font-large: rem($base-font-size * 1.5) !default;
+$base-font-xlarge: rem($base-font-size * 1.75) !default;
+$base-font-xxlarge: rem($base-font-size * 2) !default;
+$base-font-huge: rem($base-font-size * 2.25) !default;
+
+// Line height
+
+$base-line-height: 1.5 !default;
+
+// Other sizes
+
+$base-border-radius: 3px !default;
+$base-spacing: $base-line-height * 1rem !default;
+
+// Background Color
+
+$base-background-color: $color-iron !default;
+
+// Font Colors
+
+$base-font-color: $color-mako !default;
+
+// Link Colors
+
+$base-link-color: $color-picton-blue !default;
