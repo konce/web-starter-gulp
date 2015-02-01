@@ -3,34 +3,55 @@
 // ==========================================================================
 
 .header {
-  background: $base-background-color;
-  @include outer-container(100%);
   @include position(relative, null);
-  @include size(100% rem(100));
+  @include size(100% rem(90));
   @include root(ie) {
     @include size(100% rem(100));
   }
 
-    &__container {
+    &__wrapper {
+      background: $base-background-color;
+      border-bottom: 1px solid $base-border-color;
       @include position(relative);
+      @include size(100% 100%);
     }
 
-      &__collection {
+      &__container {
         @include position(relative);
-        @include span-columns(6);
+        @include outer-container($base-container-width);
+        @include size(100% 100%);
       }
 
-        &__item {
+        &__list {
+          @include clearfix;
+          list-style: none;
+          @include margin(0 0 0 0);
+          @include padding(0 0 0 0);
           @include position(relative);
-          @include span-columns(3);
+          @include outer-container(100%);
+          @include size(100% 100%);
         }
 
-          &__link {
-            color: $base-link-color;
-            font-size: rem(14);
-            @include transition(color 300ms ease-in-out);
-            &:hover {
-              color: $base-link-color;
-            }
+          &__item {
+            height: 100%;
+            list-style: none;
+            @include position(relative);
+            @include span-columns(4);
           }
+
+            &__link {
+              color: $base-link-color;
+              display: block;
+              font-size: rem(20);
+              letter-spacing: rem(.8);
+              line-height: rem(80);
+              @include size(100% 100%);
+              @include transition(color 300ms ease-in-out);
+              text-align: center;
+              text-transform: uppercase;
+
+              &:hover {
+                color: $base-link-color-hover;
+              }
+            }
 }

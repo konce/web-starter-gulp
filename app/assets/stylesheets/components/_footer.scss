@@ -5,5 +5,19 @@
 .footer {
   background: $base-background-color;
   @include position(absolute, null 0 0 0);
-  @include size(100% rem(100));
+  @include size(100% rem(50));
+
+  &__wrapper {
+    background: $base-background-color;
+    border-top: 1px solid $base-border-color;
+    @include position(relative);
+    @include size(100% 100%);
+  }
+
+    &__container {
+      @include position(relative);
+      @include outer-container($base-container-width);
+      @include size(100% 100%);
+    }
+
 }

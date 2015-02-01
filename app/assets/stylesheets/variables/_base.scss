@@ -9,7 +9,7 @@ $base-title-font-family: $georgia !default;
 
 // Size
 
-$base-font-size: 18px;
+$base-font-size: 18;
 $base-font-small: rem($base-font-size * .075) !default;
 $base-font-base: rem($base-font-size * 1) !default;
 $base-font-medium: rem($base-font-size * 1.25) !default;
@@ -21,15 +21,18 @@ $base-font-huge: rem($base-font-size * 2.25) !default;
 // Line height
 
 $base-line-height: 1.5 !default;
+$heading-line-height: 1.2 !default;
 
 // Other sizes
 
 $base-border-radius: 3px !default;
 $base-spacing: $base-line-height * 1rem !default;
+$small-spacing: $base-spacing / 2;
 
 // Background Color
 
-$base-background-color: $color-iron !default;
+$base-background-color: $color-white !default;
+
 
 // Font Colors
 
@@ -37,4 +40,13 @@ $base-font-color: $color-mako !default;
 
 // Link Colors
 
-$base-link-color: $color-picton-blue !default;
+$base-link-color: $color-grey !default;
+$base-link-color-active: $color-black !default;
+$base-link-color-hover: $color-black !default;
+
+// Border Colors
+$base-border-color: $color-munsell !default;
+
+
+// Container
+$base-container-width: rem(1024) !default;

@@ -3,6 +3,18 @@
 // ==========================================================================
 
 .main {
-  @include padding(0 0 rem(100) 0);
+  @include padding(0 0 rem(50) 0);
   @include position(relative, null);
+
+  &__wrapper {
+    @include padding(rem(50) 0 rem(50) 0);
+    @include position(relative);
+    @include size(100% 100%);
+  }
+
+    &__container {
+      @include position(relative);
+      @include outer-container($base-container-width);
+      @include size(100% 100%);
+    }
 }

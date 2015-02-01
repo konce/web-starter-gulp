@@ -23,6 +23,7 @@ body {
 }
 
 body {
+  background: $base-background-color;
   color: $base-font-color;
   font-family: $base-font-family;
   height: auto !important;
@@ -42,7 +43,7 @@ h5,
 h6 {
   color: $base-font-color;
   font-family: $base-title-font-family;
-  margin: 0;
+  @include margin(0 0 0 0);
 }
 
 h1 {
@@ -72,6 +73,7 @@ h6 {
 p {
   color: $base-font-color;
   font-size: $base-font-base;
+  @include margin(0 0 0 0);
 }
 
 // Link
@@ -92,7 +94,16 @@ ul,
 ol {
   font-size: $base-font-base;
   list-style: none;
-  margin: 0;
+  @include margin(0 0 rem(40) 0);
+  @include padding(0 0 0 0);
+
+  li {
+    list-style: none;
+    @include margin(0 0 rem(10) 0);
+    @include padding(0 0 0 0);
+    @include position(relative, null);
+    word-wrap: break-word;
+  }
 }
 
 ul ol,
@@ -104,12 +115,19 @@ li > p {
   padding-top: 0;
 }
 
+
 // Img
 
 img,
 picture {
   margin: 0;
   max-width: 100%;
+}
+
+// Blockquote
+
+blockquote {
+  @include margin(0 0 0 0);
 }
 
 // Scroll
