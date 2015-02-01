@@ -5,11 +5,11 @@
 // Typography
 
 $base-font-family: $helvetica !default;
-$base-title-font-family: $georgia !default;
+$heading-font-family: $georgia !default;
 
 // Size
 
-$base-font-size: 18;
+$base-font-size: 14;
 $base-font-small: rem($base-font-size * .075) !default;
 $base-font-base: rem($base-font-size * 1) !default;
 $base-font-medium: rem($base-font-size * 1.25) !default;
@@ -20,14 +20,15 @@ $base-font-huge: rem($base-font-size * 2.25) !default;
 
 // Line height
 
-$base-line-height: 1.5 !default;
+$base-line-height: 1.4 !default;
+$base-spacing: rem($base-line-height * 10) !default;
+$small-spacing: $base-spacing / 2;
 $heading-line-height: 1.2 !default;
 
 // Other sizes
 
 $base-border-radius: 3px !default;
-$base-spacing: $base-line-height * 1rem !default;
-$small-spacing: $base-spacing / 2;
+
 
 // Background Color
 
@@ -37,6 +38,7 @@ $base-background-color: $color-white !default;
 // Font Colors
 
 $base-font-color: $color-mako !default;
+$heading-font-color: $color-mako !default;
 
 // Link Colors
 

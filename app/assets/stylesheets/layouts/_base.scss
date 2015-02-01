@@ -41,9 +41,10 @@ h3,
 h4,
 h5,
 h6 {
-  color: $base-font-color;
-  font-family: $base-title-font-family;
-  @include margin(0 0 0 0);
+  color: $heading-font-color;
+  font-family: $heading-font-family;
+  line-height: $heading-line-height;
+  @include margin(0 0 $base-spacing 0);
 }
 
 h1 {
@@ -73,7 +74,8 @@ h6 {
 p {
   color: $base-font-color;
   font-size: $base-font-base;
-  @include margin(0 0 0 0);
+  line-height: $base-line-height;
+  @include margin(0 0 $base-spacing 0);
 }
 
 // Link
@@ -94,12 +96,13 @@ ul,
 ol {
   font-size: $base-font-base;
   list-style: none;
-  @include margin(0 0 rem(40) 0);
+  @include margin(0 0 $base-spacing 0);
   @include padding(0 0 0 0);
 
   li {
     list-style: none;
-    @include margin(0 0 rem(10) 0);
+    line-height: $base-line-height;
+    @include margin(0 0 $small-spacing 0);
     @include padding(0 0 0 0);
     @include position(relative, null);
     word-wrap: break-word;
