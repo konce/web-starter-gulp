@@ -4,17 +4,18 @@
 
 // Assets
 
-$path-assets: "";
+$path-assets: "../../../app/assets/";
 
 // Images
 
-$path-images: "#{$path-assets}";
-$path-icons: "#{$path-assets}/icons/";
-$path-ui: "#{$path-assets}/ui/";
+$path-images: "#{$path-assets}images/";
+$path-icons: "#{$path-assets}icons/";
+$path-ui: "#{$path-images}ui/";
 
 // Fonts
 
-$path-fonts: "#{$path-assets}/fonts/";
+$path-fonts: "#{$path-assets}fonts/";
 
 // Fonts Icons
-$path-icomoon: "#{$path-fonts}/icomoon/";
+$path-icomoon: "#{$path-assets}fonts/icomoon/fonts/";
+$path-fontello: "#{$path-fonts}fontello/font/";

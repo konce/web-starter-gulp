@@ -153,5 +153,7 @@
     "vinyl-source-stream": "~0.1.1",
     "watchify": "~1.0.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.11.2"
+  }
 }
