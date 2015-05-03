@@ -1,3 +1,0 @@
-stores =
-
-module.exports = stores

@@ -1,3 +1,0 @@
-actions =
-
-module.exports = actions
