@@ -1,5 +1,0 @@
-@mixin root($classname) {
-
-  // We need the parent selector here in order to mimic the @media bubbling.
-  .#{$classname} & { @content; }
-}

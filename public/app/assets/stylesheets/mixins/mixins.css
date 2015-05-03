@@ -1,9 +1,0 @@
-/* line 4, ./vendor/assets/bower_components/neat/app/assets/stylesheets/grid/_box-sizing.scss */
-html {
-  box-sizing: border-box; }
-
-/* line 11, ./vendor/assets/bower_components/neat/app/assets/stylesheets/grid/_box-sizing.scss */
-*, *:before, *:after {
-  box-sizing: inherit; }
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWl4aW5zL21peGlucy5jc3MiLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJtaXhpbnMvbWl4aW5zLmNzcyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKiBsaW5lIDQsIC4vdmVuZG9yL2Fzc2V0cy9ib3dlcl9jb21wb25lbnRzL25lYXQvYXBwL2Fzc2V0cy9zdHlsZXNoZWV0cy9ncmlkL19ib3gtc2l6aW5nLnNjc3MgKi9cbmh0bWwge1xuICAtd2Via2l0LWJveC1zaXppbmc6IGJvcmRlci1ib3g7XG4gIC1tb3otYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDsgfVxuXG4vKiBsaW5lIDExLCAuL3ZlbmRvci9hc3NldHMvYm93ZXJfY29tcG9uZW50cy9uZWF0L2FwcC9hc3NldHMvc3R5bGVzaGVldHMvZ3JpZC9fYm94LXNpemluZy5zY3NzICovXG4qLCAqOmJlZm9yZSwgKjphZnRlciB7XG4gIC13ZWJraXQtYm94LXNpemluZzogaW5oZXJpdDtcbiAgLW1vei1ib3gtc2l6aW5nOiBpbmhlcml0O1xuICBib3gtc2l6aW5nOiBpbmhlcml0OyB9XG4iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0= */

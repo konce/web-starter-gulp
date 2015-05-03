@@ -24,7 +24,7 @@
     "devicejs": "~0.1.16",
     "sass-mediaqueries": "1.4.0",
     "bourbon": "4.2.2",
-    "neat": "~1.7.2",
+    "neat": "~1.7.1",
     "webfontloader": "~1.5.18"
   }
 }
