@@ -48,12 +48,9 @@ $twitter: -1px -37px 16px 16px;
 .icon-sprite-facebook {
   @include sprite($facebook);
 }
-
 .icon-sprite-linkedin {
   @include sprite($linkedin);
 }
-
 .icon-sprite-twitter {
   @include sprite($twitter);
 }
-
