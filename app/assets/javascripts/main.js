@@ -1,1 +1,4 @@
-import React from "react"
+'use strict';
+import React from 'react';
+import Fluxxor from 'fluxxor';
+import Immutable from 'immutable';

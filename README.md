@@ -10,11 +10,11 @@ bower install
 #### Run development version:
 
 ```bash
-npm run dev
+npm run development
 ```
 
 #### Build production version:
 
 ```bash
-npm run build
+npm run production
 ```
