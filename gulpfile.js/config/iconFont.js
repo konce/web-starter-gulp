@@ -9,7 +9,7 @@ module.exports = {
   template: './gulpfile.js/tasks/iconFont/template.scss',
   sassOutputName: '_icons.scss',
   fontPath: '../../assets/fonts',
-  className: 'icon',
+  className: 'icon-font',
   options: {
     fontName: 'icons',
     appendCodepoints: true,

@@ -28,7 +28,7 @@
   }
 }
 
-[class^="icon-"] {
+.icon-font {
   @include icon;
 }
 
@@ -42,7 +42,7 @@
   }
 
   // Expose as class
-  .icon-facebook:before {
+  .icon-font-facebook:before {
     content: $icon-facebook;
   }
 
@@ -55,7 +55,7 @@
   }
 
   // Expose as class
-  .icon-linkedin:before {
+  .icon-font-linkedin:before {
     content: $icon-linkedin;
   }
 
@@ -68,7 +68,7 @@
   }
 
   // Expose as class
-  .icon-twitter:before {
+  .icon-font-twitter:before {
     content: $icon-twitter;
   }
 

@@ -28,7 +28,7 @@
   }
 }
 
-[class^="icon-"] {
+.icon-font {
   @include icon;
 }
 
@@ -43,7 +43,7 @@
   }
 
   // Expose as class
-  .icon-{{icon.name}}:before {
+  .icon-font-{{icon.name}}:before {
     content: $icon-{{icon.name}};
   }
 
