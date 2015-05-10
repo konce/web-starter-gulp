@@ -1,2 +1,3 @@
+import React from "react"
 
-let button = document.getElementById('button');
+console.log(React)

@@ -5,19 +5,16 @@
 ```bash
 npm install
 bower install
-gulp
 ```
 
-
-#### Build development version:
+#### Run development version:
 
 ```bash
-gulp development
+npm run dev
 ```
-
 
 #### Build production version:
 
 ```bash
-gulp production
+npm run build
 ```

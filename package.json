@@ -4,7 +4,15 @@
   "description": "Gulp & WebPack starter with Flux App",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ABC-Solutions/web-starter-gulp"
+    "url": "git@github.com:ABC-Solutions/web-starter-gulp.git"
+  },
+  "engines": {
+    "node": "0.10.36",
+    "npm": "2.3.0"
+  },
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build:production"
   },
   "dependencies": {
     "babel-core": "^4.7.16",
@@ -44,6 +52,7 @@
     "merge-stream": "^0.1.7",
     "object-assign": "^2.0.0",
     "pretty-hrtime": "~0.2.1",
+    "react": "^0.13.2",
     "require-dir": "^0.1.0",
     "vinyl-source-stream": "~0.1.1",
     "webpack": "^1.7.3"
