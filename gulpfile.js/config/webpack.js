@@ -19,9 +19,14 @@ module.exports = function(env) {
       publicPath: publicPath
     },
 
-    plugins: [],
+    plugins: [
+      new webpack.ResolverPlugin(
+        new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
+      )
+    ],
 
     resolve: {
+      modulesDirectories: ['node_modules', 'vendor/assets/bower_components'],
       extensions: ['', '.js', '.jsx', '.cjsx', '.coffee']
     },
 
