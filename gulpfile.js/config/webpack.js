@@ -32,8 +32,8 @@ module.exports = function(env) {
 
     module: {
       loaders: [
-        { test: /\.js$/, loader: 'babel-loader?experimental', exclude: /node_modules/ },
-        { test: /\.jsx$/, loader: 'babel-loader?experimental', exclude: /node_modules/ },
+        { test: /\.js$/, loader: 'babel-loader?stage=1', exclude: /node_modules/ },
+        { test: /\.jsx$/, loader: 'babel-loader?stage=1', exclude: /node_modules/ },
         { test: /\.cjsx$/, loaders: ['coffee', 'cjsx']},
         { test: /\.coffee$/, loader: 'coffee' }
       ]
