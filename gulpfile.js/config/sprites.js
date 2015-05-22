@@ -17,6 +17,6 @@ module.exports = {
     base64: true,
     template: './gulpfile.js/tasks/sprites/template.scss',
     margin: 2,
-    interpolation: "moving-average"
+    interpolation: "cubic"
   }
 }
