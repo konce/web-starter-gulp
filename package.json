@@ -18,15 +18,15 @@
   "dependencies": {
     "babel-core": "^5.0",
     "babel-loader": "^5.0",
-    "browser-sync": "^2.0.0",
+    "browser-sync": "^2.7.3",
     "cjsx-loader": "^2.0.1",
     "coffee-loader": "^0.7.2",
     "coffee-react-transform": "^3.1.0",
     "coffee-script": "^1.9.2",
-    "css-sprite": "^0.9.8",
+    "css-sprite": "^0.9.9",
     "del": "^1.1.1",
-    "gulp": "^3.8.7",
-    "gulp-autoprefixer": "^2.0.0",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.3.0",
     "gulp-changed": "^0.4.1",
     "gulp-filesize": "0.0.6",
     "gulp-filter": "^2.0.2",
@@ -39,7 +39,7 @@
     "gulp-rename": "^1.2.0",
     "gulp-rev": "^3.0.1",
     "gulp-rev-replace": "^0.4.0",
-    "gulp-sass": "^1.3.3",
+    "gulp-sass": "^2.0.1",
     "gulp-sequence": "^0.3.2",
     "gulp-sizereport": "^1.0.2",
     "gulp-sourcemaps": "^1.2.8",
@@ -61,19 +61,19 @@
     "pretty-hrtime": "~0.2.1",
     "require-dir": "^0.1.0",
     "vinyl-source-stream": "~0.1.1",
-    "webpack": "^1.7.3"
+    "webpack": "^1.9.8"
   },
   "devDependencies": {
     "compression": "^1.4.1",
     "express": "^4.12.2",
-    "express-react-views": "^0.7.2",
-    "fluxxor": "^1.5.3",
+    "express-react-views": "^0.8.0",
+    "fluxxor": "^1.5.4",
     "immutable": "^3.7.2",
     "jquery": "^2.1.4",
     "morgan": "^1.5.1",
     "open": "0.0.5",
     "platform": "^1.3.0",
-    "react": "^0.13.2",
+    "react": "^0.13.3",
     "react-router": "^0.13.3"
   }
 }
