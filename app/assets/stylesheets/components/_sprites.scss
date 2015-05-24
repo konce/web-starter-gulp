@@ -18,21 +18,10 @@ $facebook-offset-x: 0px;
 $facebook-offset-y: 0px;
 $facebook-width: 16px;
 $facebook-height: 16px;
-$facebook-total-width: 130px;
-$facebook-total-height: 51px;
+$facebook-total-width: 16px;
+$facebook-total-height: 16px;
 $facebook-image: '../sprites/sprite.png';
-$facebook: (0px, 0px, 0px, 0px, 16px, 16px, 130px, 51px, '../sprites/sprite.png', 'facebook', );
-$logo-name: 'logo';
-$logo-x: 0px;
-$logo-y: 17px;
-$logo-offset-x: 0px;
-$logo-offset-y: -17px;
-$logo-width: 130px;
-$logo-height: 34px;
-$logo-total-width: 130px;
-$logo-total-height: 51px;
-$logo-image: '../sprites/sprite.png';
-$logo: (0px, 17px, 0px, -17px, 130px, 34px, 130px, 51px, '../sprites/sprite.png', 'logo', );
+$facebook: (0px, 0px, 0px, 0px, 16px, 16px, 16px, 16px, '../sprites/sprite.png', 'facebook', );
       $facebook-2x-name: 'facebook-2x';
       $facebook-2x-x: 0px;
       $facebook-2x-y: 0px;
@@ -40,31 +29,20 @@ $logo: (0px, 17px, 0px, -17px, 130px, 34px, 130px, 51px, '../sprites/sprite.png'
       $facebook-2x-offset-y: 0px;
       $facebook-2x-width: 32px;
       $facebook-2x-height: 32px;
-      $facebook-2x-total-width: 260px;
-      $facebook-2x-total-height: 102px;
+      $facebook-2x-total-width: 32px;
+      $facebook-2x-total-height: 32px;
       $facebook-2x-image: '../sprites/sprite-2x.png';
-      $facebook-2x: (0px, 0px, 0px, 0px, 32px, 32px, 260px, 102px, '../sprites/sprite-2x.png', 'facebook-2x', );
-      $logo-2x-name: 'logo-2x';
-      $logo-2x-x: 0px;
-      $logo-2x-y: 34px;
-      $logo-2x-offset-x: 0px;
-      $logo-2x-offset-y: -34px;
-      $logo-2x-width: 260px;
-      $logo-2x-height: 68px;
-      $logo-2x-total-width: 260px;
-      $logo-2x-total-height: 102px;
-      $logo-2x-image: '../sprites/sprite-2x.png';
-      $logo-2x: (0px, 34px, 0px, -34px, 260px, 68px, 260px, 102px, '../sprites/sprite-2x.png', 'logo-2x', );
-$spritesheet-width: 130px;
-$spritesheet-height: 51px;
+      $facebook-2x: (0px, 0px, 0px, 0px, 32px, 32px, 32px, 32px, '../sprites/sprite-2x.png', 'facebook-2x', );
+$spritesheet-width: 16px;
+$spritesheet-height: 16px;
 $spritesheet-image: '../sprites/sprite.png';
-$spritesheet-sprites: ($facebook, $logo, );
-$spritesheet: (130px, 51px, '../sprites/sprite.png', $spritesheet-sprites, );
-    $retina-spritesheet-width: 260px;
-    $retina-spritesheet-height: 102px;
+$spritesheet-sprites: ($facebook, );
+$spritesheet: (16px, 16px, '../sprites/sprite.png', $spritesheet-sprites, );
+    $retina-spritesheet-width: 32px;
+    $retina-spritesheet-height: 32px;
     $retina-spritesheet-image: '../sprites/sprite-2x.png';
-    $retina-spritesheet-sprites: ($facebook-2x, $logo-2x, );
-    $retina-spritesheet: (260px, 102px, '../sprites/sprite-2x.png', $retina-spritesheet-sprites, );
+    $retina-spritesheet-sprites: ($facebook-2x, );
+    $retina-spritesheet: (32px, 32px, '../sprites/sprite-2x.png', $retina-spritesheet-sprites, );
 
     /*
     These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
@@ -73,9 +51,7 @@ $spritesheet: (130px, 51px, '../sprites/sprite.png', $spritesheet-sprites, );
     */
       $facebook-group-name: 'facebook';
       $facebook-group: ('facebook', $facebook, $facebook-2x, );
-      $logo-group-name: 'logo';
-      $logo-group: ('logo', $logo, $logo-2x, );
-    $retina-groups: ($facebook-group, $logo-group, );
+    $retina-groups: ($facebook-group, );
 
 /*
 The provided mixins are intended to be used with the array-like variables

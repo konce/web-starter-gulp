@@ -10,7 +10,8 @@ module.exports = function(env) {
 
   var webpackConfig = {
     entry: {
-      main: [jsSrc + 'main.js']
+      main: [jsSrc + 'main.js'],
+      flux: [jsSrc + 'flux.jsx']
     },
 
     output: {
