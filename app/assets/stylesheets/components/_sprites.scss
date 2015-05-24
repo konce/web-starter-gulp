@@ -1,56 +1,175 @@
-$facebook: -1px -1px 16px 16px;
-$linkedin: -1px -19px 16px 16px;
-$twitter: -1px -37px 16px 16px;
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
 
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$facebook-name: 'facebook';
+$facebook-x: 0px;
+$facebook-y: 0px;
+$facebook-offset-x: 0px;
+$facebook-offset-y: 0px;
+$facebook-width: 16px;
+$facebook-height: 16px;
+$facebook-total-width: 130px;
+$facebook-total-height: 51px;
+$facebook-image: '../sprites/sprite.png';
+$facebook: (0px, 0px, 0px, 0px, 16px, 16px, 130px, 51px, '../sprites/sprite.png', 'facebook', );
+$logo-name: 'logo';
+$logo-x: 0px;
+$logo-y: 17px;
+$logo-offset-x: 0px;
+$logo-offset-y: -17px;
+$logo-width: 130px;
+$logo-height: 34px;
+$logo-total-width: 130px;
+$logo-total-height: 51px;
+$logo-image: '../sprites/sprite.png';
+$logo: (0px, 17px, 0px, -17px, 130px, 34px, 130px, 51px, '../sprites/sprite.png', 'logo', );
+      $facebook-2x-name: 'facebook-2x';
+      $facebook-2x-x: 0px;
+      $facebook-2x-y: 0px;
+      $facebook-2x-offset-x: 0px;
+      $facebook-2x-offset-y: 0px;
+      $facebook-2x-width: 32px;
+      $facebook-2x-height: 32px;
+      $facebook-2x-total-width: 260px;
+      $facebook-2x-total-height: 102px;
+      $facebook-2x-image: '../sprites/sprite-2x.png';
+      $facebook-2x: (0px, 0px, 0px, 0px, 32px, 32px, 260px, 102px, '../sprites/sprite-2x.png', 'facebook-2x', );
+      $logo-2x-name: 'logo-2x';
+      $logo-2x-x: 0px;
+      $logo-2x-y: 34px;
+      $logo-2x-offset-x: 0px;
+      $logo-2x-offset-y: -34px;
+      $logo-2x-width: 260px;
+      $logo-2x-height: 68px;
+      $logo-2x-total-width: 260px;
+      $logo-2x-total-height: 102px;
+      $logo-2x-image: '../sprites/sprite-2x.png';
+      $logo-2x: (0px, 34px, 0px, -34px, 260px, 68px, 260px, 102px, '../sprites/sprite-2x.png', 'logo-2x', );
+$spritesheet-width: 130px;
+$spritesheet-height: 51px;
+$spritesheet-image: '../sprites/sprite.png';
+$spritesheet-sprites: ($facebook, $logo, );
+$spritesheet: (130px, 51px, '../sprites/sprite.png', $spritesheet-sprites, );
+    $retina-spritesheet-width: 260px;
+    $retina-spritesheet-height: 102px;
+    $retina-spritesheet-image: '../sprites/sprite-2x.png';
+    $retina-spritesheet-sprites: ($facebook-2x, $logo-2x, );
+    $retina-spritesheet: (260px, 102px, '../sprites/sprite-2x.png', $retina-spritesheet-sprites, );
+
+    /*
+    These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+
+    The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+    */
+      $facebook-group-name: 'facebook';
+      $facebook-group: ('facebook', $facebook, $facebook-2x, );
+      $logo-group-name: 'logo';
+      $logo-group: ('logo', $logo, $logo-2x, );
+    $retina-groups: ($facebook-group, $logo-group, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
 @mixin sprite-width($sprite) {
-  width: nth($sprite, 3);
+  width: nth($sprite, 5);
 }
 
 @mixin sprite-height($sprite) {
-  height: nth($sprite, 4);
-}
-
-@function sprite-width($sprite) {
-  @return nth($sprite, 3);
-}
-
-@function sprite-height($sprite) {
-  @return nth($sprite, 4);
+  height: nth($sprite, 6);
 }
 
 @mixin sprite-position($sprite) {
-  $sprite-offset-x: nth($sprite, 1);
-  $sprite-offset-y: nth($sprite, 2);
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
   background-position: $sprite-offset-x  $sprite-offset-y;
 }
 
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
 @mixin sprite($sprite) {
+  @include sprite-image($sprite);
   @include sprite-position($sprite);
-  background-repeat: no-repeat;
-  overflow: hidden;
-  display: block;
   @include sprite-width($sprite);
   @include sprite-height($sprite);
 }
 
-.icon-sprite {
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAA2CAYAAADK88l3AAAB50lEQVRIDd2W723CMBDFcdUFsgIrkO9QCeYqnSuRCgOwQkaAEah/bl6UuGeThHyoQArn2M/v/vjuYne/31dL/N4hcc6tNpvNd1EUu6mkl8tld71ezw6LyrKcRSKlVVW5N17mWCISyeCaXh7JpmmOwqzX627M3Giiuq6dSJCziGRJ7kBCjPqacuNcLLOu3W63kx4UyDIIY9KHRH7zl6zU2Mfnz0mHPDocDtn0xhJI9vu9ievySBqfkZOCnVP06kS0gpz/uTXyjPVw/Dng2LXFgh0y+zU7ZDJGOo2ngg0JhTqWBJxpEb3Gd8PT00R9i+JxymXTonZzaGga46qvgA8ey22TyHIJd2lsXm5pcjFmEhGb414twtFE2pCS/49o1Fck5Y7ml/+KvGaHXC1xGYUje4nQqUj6y8OnxioTSsbPnTsiLlEUpIB9CThuKyqVVv5eRtHERHsjQ8PgF5OwCF5kvA9KpCU79V0AlPupP4XM5nNk3X0A8XjiY4qMS2oX7JQFsfkpMuaDazIvB7TW+p1SROe5ZFLQxYgJK04CWlKXeGI0ODULnJrruwVmQEQXGOMiGGW2FA2IPOBhrCCxKiCUSJvRO7GnZIoEfBdsnzNb8sZKPuIBCRZbSkIHCX/W6oQ5OIJFE/YkoT+kmTmeVs1roQAAAABJRU5ErkJggg==');
+      /*
+      The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+      It should be used with a "retina group" variable.
+
+      The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+
+      $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+
+      .icon-home {
+        @include retina-sprite($icon-home-group);
+      }
+      */
+      @mixin sprite-background-size($sprite) {
+        $sprite-total-width: nth($sprite, 7);
+        $sprite-total-height: nth($sprite, 8);
+        background-size: $sprite-total-width $sprite-total-height;
+      }
+
+      @mixin retina-sprite($retina-group) {
+        $normal-sprite: nth($retina-group, 2);
+        $retina-sprite: nth($retina-group, 3);
+        @include sprite($normal-sprite);
+
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          @include sprite-image($retina-sprite);
+          @include sprite-background-size($normal-sprite);
+        }
+      }
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
 }
 
-@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
-.icon-sprite {
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAABsCAYAAAACCxCZAAAC1ElEQVRoBe2a627DIAyFl2mP1j51+26dmGbr4BqMKSb54UlTCL59HJPSRTter9fXlX6+rwRTWH4I6DgOGn7dbrdtsj2fz7/C1Kk3hXbCFAVkvQpIGlmy4AHWZSCcDK7fTc9AXa+NxgSyxObH3nL02ulxlnHWXl0O1AKRYK37y+2hpQpJdaz2aCqFKTQDUwDDgLTVj8wlkKXSR5tabmIsptlG9lW2DFXUxh+1TLYA2yRtWnFtLlumqYJzqRCqoY1TIU0VnEuFUA1tnAppquDcdRXCcwiJd48rhc6CwroHvZfZrUSrXqVQy2nnfAJZavM3xnzH+C+V/Kpb7SFptORdZce6DISTqwrN5GGgmeCImASyVHUrhOeOlXzG7gIiGLrOFLRiXED0JNLVSj5jdwGVApEwJb8bqARF/lwOiA/XkVXjZsbWWfPoa9UJUwghyxjve1AuhXqJyDZamPzlNUSh0iL6xYIjsMuB5H6R9wiojZcDaUU8cwlkqZUKpUKWApb9cnuI337c7/dt/xGjqfR4PP7+S+ZyCiWQ1i6cY4VGTmIMjBozUClwFhTW5acsasXevJVC3uAI/wSyVOUv+fiO0QqKsNP78myZpS63zHL02lt/beBnDuX899UP11YiCrauJb6XA22ar7qHMMgCQPtonAZCeSogTIhjcu5dvf6tXBWQdOqtRPquuu8CUZFVq6d8vesQUEkQqRY+eXza0ye1Rw1M5IlDhSgHfVJ/9Dk0C4FAcly1LKKALGjdV0CW8w77qUC0f3ChFZDmgM47xhXQjoJWjTegs1V6Ayor2AHVqqECWbJG2k8BaqlTFnoKUE/hJlBvFb2Els3K+3a4aglXHSk9GDpcmwohWC8R+vXGoznM036FOqMwZUEMtKKwppAHpsRzy7yBWnE5N5NT3dSfqjUDQptaBcKVjsLNQGCdYSAMihwTEO+hyGKe3NwyT1Ck7+UU+gWB+AhhzpAUIQAAAABJRU5ErkJggg==');
-  background-size: 18px 54px;
-}
-}
+    /*
+      The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+      This yields the same output as CSS retina template but can be overridden in SCSS
 
-
-.icon-sprite-facebook {
-  @include sprite($facebook);
-}
-.icon-sprite-linkedin {
-  @include sprite($linkedin);
-}
-.icon-sprite-twitter {
-  @include sprite($twitter);
-}
+      @include retina-sprites($retina-groups);
+    */
+    @mixin retina-sprites($retina-groups) {
+      @each $retina-group in $retina-groups {
+        $sprite-name: nth($retina-group, 1);
+        .icon-sprite-#{$sprite-name} {
+          @include retina-sprite($retina-group);
+        }
+      }
+    }
+    @include retina-sprites($retina-groups);

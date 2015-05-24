@@ -8,10 +8,10 @@ var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function () {
   return gulp.src(config.src)
-    .pipe(sourcemaps.init())
+    //.pipe(sourcemaps.init())
     .pipe(sass(config.settings))
     .on('error', handleErrors)
-    .pipe(sourcemaps.write())
+    //.pipe(sourcemaps.write())
     .pipe(autoprefixer(config.autoprefixer))
     .pipe(gulp.dest(config.dest))
     .pipe(browserSync.reload({stream:true}));

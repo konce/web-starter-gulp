@@ -26,7 +26,7 @@ module.exports = function(env) {
     ],
 
     resolve: {
-      modulesDirectories: ['node_modules', 'vendor/assets/bower_components'],
+      modulesDirectories: ['node_modules', 'vendor/assets/bower_components', 'vendor/assets/components'],
       extensions: ['', '.js', '.jsx', '.cjsx', '.coffee']
     },
 

@@ -132,3 +132,12 @@ img {
 blockquote {
   @include margin(0 0 0 0);
 }
+
+
+.icon {
+  &-sprite,
+  &-font {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

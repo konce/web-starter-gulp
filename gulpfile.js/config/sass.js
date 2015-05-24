@@ -7,7 +7,9 @@ module.exports = {
   dest: config.publicAssets + '/stylesheets',
   settings: {
     imagePath: 'assets/images',
-    loadPath: [__dirname + "vendor/assets/bower_components/"],
+    includePaths: [config.sourceBower, config.sourceComponents],
+    sourceMap: 'sass',
+    sourceComments: "map",
     errLogToConsole: true
   }
 }

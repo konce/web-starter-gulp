@@ -1,22 +1,18 @@
 var config = require('./')
 
 module.exports = {
-  src: config.sourceAssets + "/sprites/**",
+  src: config.sourceAssets + '/sprites/*.png',
   sassDest: config.sourceAssets + '/stylesheets/components/',
-  dest: config.publicAssets + "/sprites",
-  sassOutputName: '_sprites.scss',
+  dest: config.publicAssets + '/sprites',
   sprite: {
-    name: 'sprite',
-    style: '_sprites.scss',
-    cssPath: '../../../assets/sprites/',
-    processor: 'scss',
-    retina: true,
-    prefix: 'icon-sprite',
-    orientation: 'vertical',
-    watch: true,
-    base64: true,
-    template: './gulpfile.js/tasks/sprites/template.scss',
-    margin: 2,
-    interpolation: "cubic"
+    retinaSrcFilter: [config.sourceAssets.substr(2) + '/sprites/*-2x.png'],
+    retinaImgName: 'sprite-2x.png',
+    retinaImgPath: '../sprites/sprite-2x.png',
+    imgName: 'sprite.png',
+    imgPath: '../sprites/sprite.png',
+    cssName: '_sprites.scss',
+    padding: 1,
+    algorithm: 'top-down',
+    cssTemplate: './gulpfile.js/tasks/sprites/handlebarsInheritance.scss.handlebars'
   }
 }
