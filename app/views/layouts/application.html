@@ -21,7 +21,11 @@
   {% block head %}{% endblock %}
 </head>
 <body>
-  {% block content %}{% endblock %}
+  <div id="application">
+    <div id="application__top">
+      {% block content %}{% endblock %}
+    </div>
+  </div>
   <script src="assets/javascripts/vendor.js"></script>
   <script src="assets/javascripts/main.js"></script>
   {% block javascript %}{% endblock %}

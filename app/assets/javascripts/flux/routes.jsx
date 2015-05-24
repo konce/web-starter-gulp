@@ -13,4 +13,4 @@ export default Route =
   <Route handler={Layout} name="home" path="/">
     <Route handler={Posts} name="posts" path="/posts/" />
     <DefaultRoute handler={Home} />
-  </Route>
+  </Route>;

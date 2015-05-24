@@ -8,11 +8,37 @@
   box-sizing: border-box;
 }
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  box-sizing: border-box;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-overflow-scrolling: touch;
+  -webkit-touch-callout: none;
+}
+
 html {
   font-size: 100%;
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+
+  @include media($screen-laptop) {
+    font-size: 64%;
+  }
+
+  @include media($screen-tablet) {
+    font-size: 62%;
+  }
+
+  @include media($screen-phone-max) {
+    font-size: 57%;
+  }
+
+  @include media($screen-phone) {
+    font-size: 38%;
+  }
 }
 
 html,
@@ -20,17 +46,17 @@ body {
   @include padding(0 0 0 0);
   @include margin(0 0 0 0);
   @include size(100% 100%);
+  overflow: hidden;
 }
 
-
 body {
-  background: $base-background-color;
+  background-color: $color-black-haze;
   color: $base-font-color;
   font-family: $base-font-family;
   height: auto !important;
   height: 100%;
   min-height: 100%;
-  @include position(relative, null);
+  @include position(relative);
   -webkit-font-smoothing: antialiased;
 }
 

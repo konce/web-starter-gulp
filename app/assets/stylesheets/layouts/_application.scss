@@ -2,6 +2,25 @@
 // Layout: Application
 // ==========================================================================
 
-.application {
-  @include position(relative);
+#application,
+#application__top {
+  @include position(absolute);
+}
+
+#application {
+  @include backface-visibility(visible);
+  @include size(100%);
+  overflow-x: hidden;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+
+  &__top {
+    min-height: 100%;
+    @include size(100% auto);
+    z-index: 2;
+  }
+
+  &__bottom {
+
+  }
 }
